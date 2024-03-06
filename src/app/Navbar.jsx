@@ -61,7 +61,7 @@ export default function navbar() {
       },
     },
     typography: {
-      fontFamily: "IBM Plex Sans Thai, sans-serif",
+      fontFamily: "Kanit, sans-serif",
     },
   });
 
@@ -180,6 +180,7 @@ export default function navbar() {
                         color: "#222222",
                       }}
                     >
+                      
                       {menu}
                     </MenuItem>
                   ))}

@@ -64,10 +64,10 @@ export default function Contact() {
           }}
         >
           <Grid
-            lg={12}
+            xs={12}
             xl={6}
             sx={{
-              display: {md:"none",xl:"flex"},
+              display: {xs:"none",xl:"flex"},
               justifyContent: "center",
               zIndex: 2,
             }}
@@ -80,12 +80,12 @@ export default function Contact() {
               }}
             >
               <Typography
-                sx={{ fontSize: 35, fontWeight: 400, color: "#915BD7" }}
+                sx={{ fontSize: {xs:18,md:24,lg:30,xl:35}, fontWeight: 400, color: "#915BD7" }}
               >
                 บริษัท เป็นสุข เฮลท์แคร์ เทคโนโลยี จำกัด
               </Typography>
               <Typography
-                sx={{ fontSize: 35, fontWeight: 400, color: "#5D6169" }}
+                sx={{ fontSize: {xs:18,md:24,lg:30,xl:35}, fontWeight: 400, color: "#5D6169" }}
               >
                 PENSOOK HEALTH CARE <br />
                 TECHNOLOGY CO., LTD.
@@ -110,7 +110,7 @@ export default function Contact() {
                 </Box>
                 <Typography
                   sx={{
-                    fontSize: 25,
+                    fontSize: {xs:16,md:20,lg:25},
                     fontWeight: 400,
                     color: "#3D3F43",
                     ml: 2,
@@ -223,10 +223,10 @@ export default function Contact() {
           </Grid>
 
           <Grid
-          lg={12}
+            md={12}
             xl={6}
             sx={{
-              display: "flex",
+              display: {xs:"none",md:"flex"},
               justifyContent: "center",
               zIndex: 2,
               flexDirection: "column",
@@ -235,7 +235,7 @@ export default function Contact() {
           >
             <Box
               sx={{
-                display: {lg:"flex",xl:"none"},
+                display: {xs:"none",md:"flex",xl:"none"},
                 justifyContent: "start",
                 flexDirection: "column",
               }}
@@ -402,6 +402,190 @@ export default function Contact() {
               />
             </Box>
           </Grid>
+
+
+
+          <Grid
+            xs={12}
+            sx={{
+              display: {xs:"flex",md:"none"},
+              justifyContent: "center",
+              zIndex: 2,
+              flexDirection: "column",
+              alignItems:"center"
+            }}
+          >
+            <Box
+              sx={{
+                display: {xs:"flex",xl:"none"},
+                justifyContent: "start",
+                flexDirection: "column",
+              }}
+            >
+              <Typography
+                sx={{ fontSize: 35, fontWeight: 400, color: "#915BD7" }}
+              >
+                บริษัท เป็นสุข เฮลท์แคร์ เทคโนโลยี จำกัด
+              </Typography>
+              <Typography
+                sx={{ fontSize: 35, fontWeight: 400, color: "#5D6169" }}
+              >
+                PENSOOK HEALTH CARE TECHNOLOGY CO., LTD.
+              </Typography>
+              <Box
+                sx={{ display: "flex", justifyContent: "start", pt: "70px" }}
+              >
+                <Box
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: 50,
+                    bgcolor: "#007DFC",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <IoLocationSharp
+                    style={{ width: "29px", height: "29px", color: "#FFFFFF" }}
+                  />
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: 25,
+                    fontWeight: 400,
+                    color: "#3D3F43",
+                    ml: 2,
+                  }}
+                >
+                  95/1 หมู่ที่ 3 ตำบลคลองจิก อำเภอบางปะอิน จังหวัดพระนครศรีอยุธยา 13160
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  pt: {md:"80px",xl:"145px"},
+                  px:17,
+                  pb:{md:"75px",xl:0}
+                }}
+              >
+                <Button
+                  variant="contained"
+                  startIcon={
+                    <FaFacebook
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        color: "#007DFC",
+                      }}
+                    />
+                  }
+                  sx={{
+                    display: "flex",
+                    justifyContent: "start",
+                    bgcolor: "#FFFFFF",
+                    width: 230,
+                    height: 65,
+                    "&.MuiButton-root": {
+                      borderRadius: "8px !important",
+                      boxShadow: [
+                        "-3px 8px 20px  rgba(0,0,0, 0.25) !important",
+                      ],
+                    },
+                    "&: hover": {
+                      bgcolor: "#CEE6FF",
+                      "&.MuiButton-root": {
+                        boxShadow: [
+                          "-3px 8px 20px 0px rgba(0, 125, 252, 0.9) !important",
+                        ],
+                      },
+                    },
+                  }}
+                  onClick={redirectToPensookFacebook}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: 16,
+                      fontWeight: 400,
+                      color: "#007DFC",
+                      textTransform: "none",
+                    }}
+                  >
+                    Facebook PENSOOK
+                  </Typography>
+                </Button>
+                <Button
+                  variant="contained"
+                  startIcon={
+                    <FaLine
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        color: "#06C755",
+                      }}
+                    />
+                  }
+                  sx={{
+                    display: "flex",
+                    justifyContent: "start",
+                    bgcolor: "#FFFFFF",
+                    width: 230,
+                    height: 65,
+                    "&.MuiButton-root": {
+                      borderRadius: "8px !important",
+                      boxShadow: [
+                        "-3px 8px 20px  rgba(0,0,0, 0.25) !important",
+                      ],
+                    },
+                    "&: hover": {
+                      bgcolor: "#CEE6FF",
+                      "&.MuiButton-root": {
+                        boxShadow: [
+                          "-3px 8px 20px 0px rgba(0, 125, 252, 0.9) !important",
+                        ],
+                      },
+                    },
+                  }}
+                  onClick={redirectToPensookLine}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: 16,
+                      fontWeight: 400,
+                      color: "#007DFC",
+                      textTransform: "none",
+                    }}
+                  >
+                    Line PENSOOK
+                  </Typography>
+                </Button>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                p: 5,
+                maxWidth: 700,
+                backgroundColor: "rgba(248, 248, 248, 0.5)",
+                borderRadius: 4,
+                position: "relative",
+                boxShadow: "0px 8px 10px  rgba(0, 0, 0, 0.5)",
+                border: "1px solid white",
+              }}
+            >
+              <ContactForm
+                sx={{
+                  position: "absolute",
+                  zIndex: 1,
+                }}
+              />
+            </Box>
+          </Grid>
+
+
         </Grid>
         <AppBar
           position="static"

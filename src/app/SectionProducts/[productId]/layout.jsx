@@ -16,7 +16,7 @@ export default function ProductLayout(props) {
   
   return (
     <html lang="en">
-      <body >
+      <body style={{overflowX:"hidden"}}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />

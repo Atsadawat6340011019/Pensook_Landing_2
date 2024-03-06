@@ -14,7 +14,7 @@ import Paper from "@mui/material/Paper";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
-export default function navbar() {
+export default function NavbarProduct() {
   const router = useRouter();
   const [menuHome, setMenuHome] = useState();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,7 +29,6 @@ export default function navbar() {
   };
 
   const menuItems = [
-    "HOME",
     "HEALTHCARE COMMUNITIES",
     "COMPANY EXPERTISE",
     "PRODUCTS & SOLUTIONS",
@@ -62,7 +61,7 @@ export default function navbar() {
       },
     },
     typography: {
-      fontFamily: "IBM Plex Sans Thai, sans-serif",
+      fontFamily: "Kanit, sans-serif",
     },
   });
 
@@ -81,7 +80,7 @@ export default function navbar() {
           sx={{
             height: "80px",
             bgcolor: "#FFFFFF",
-            px: { lg: "50px", xl: "80px", xxl: "137px" },
+            px: { xs:"30px",lg: "50px", xl: "80px", xxl: "137px" },
             pl: { md: "64px" },
             display: "flex",
             justifyContent: "center",
@@ -109,7 +108,7 @@ export default function navbar() {
             </Link>
             <Box
               sx={{
-                display: { md: "flex", lg: "none" },
+                display: { xs: "flex", lg: "none" },
                 justifyContent: "end",
               }}
             >
@@ -120,7 +119,7 @@ export default function navbar() {
                   aria-haspopup="true"
                   aria-expanded={open ? "true" : undefined}
                   onClick={handleClick}
-                  sx={{ mr: "64px" }}
+                  
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,11 +154,10 @@ export default function navbar() {
                 <Menu
                   sx={{
                     mt: 3,
-                    mr: 50,
                     "& .MuiPopover-paper": {
                       borderRadius: "8px",
                       width: "273px",
-                      height: "240px",
+                      height: {sm:"240px"},
                     },
                   }}
                   id="basic-menu"
@@ -176,7 +174,7 @@ export default function navbar() {
                       onClick={handleClose}
                       sx={{
                         px: "30px",
-                        py: "8.2px",
+                        py: {xs:"2px",sm:"8.2px"},
                         fontSize: 14,
                         fontWeight: 400,
                         color: "#222222",
@@ -190,7 +188,7 @@ export default function navbar() {
             </Box>
             <Box
               sx={{
-                display: { md: "none", lg: "flex" },
+                display: { xs: "none", lg: "flex" },
               }}
             >
               <Typography
@@ -204,7 +202,7 @@ export default function navbar() {
                   "&:hover": {
                     textDecoration: "underline",
                   },
-                  
+                  display: menuHome ? "flex" : "none",
                 }}
               >
                 HOME

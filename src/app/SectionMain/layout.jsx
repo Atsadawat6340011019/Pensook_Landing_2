@@ -7,12 +7,12 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/theme";
 import Navbar from "../Navbar"
-
 export default function MainLayout(props) {
   
   return (
     <html lang="en">
-      <body >
+       
+      <body style={{overflowX:"hidden"}}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />

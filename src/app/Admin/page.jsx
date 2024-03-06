@@ -27,10 +27,10 @@ export default function Page() {
       {/* <HeroSlideImage />
       <ArticleDetail />
       <RecommendArticle /> */}
-        {/*  <UpdateArticle /> */}    
+          <UpdateArticle />    
        {/* <TestSwap /> */}
        {/* <DetailEditor />  */} 
-        <AddPostEditor /> 
+       {/* <AddPostEditor /> */} 
       
        </RootLayout>
      

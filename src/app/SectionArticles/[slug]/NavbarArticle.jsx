@@ -29,7 +29,6 @@ export default function NavbarArticle() {
   };
 
   const menuItems = [
-    "HOME",
     "HEALTHCARE COMMUNITIES",
     "COMPANY EXPERTISE",
     "PRODUCTS & SOLUTIONS",
@@ -62,7 +61,7 @@ export default function NavbarArticle() {
       },
     },
     typography: {
-      fontFamily: "IBM Plex Sans Thai, sans-serif",
+      fontFamily: "Kanit, sans-serif",
     },
   });
 
@@ -81,7 +80,7 @@ export default function NavbarArticle() {
           sx={{
             height: "80px",
             bgcolor: "#FFFFFF",
-            px: { lg: "50px", xl: "80px", xxl: "137px" },
+            px: { xs:"30px",lg: "50px", xl: "80px", xxl: "137px" },
             pl: { md: "64px" },
             display: "flex",
             justifyContent: "center",
@@ -100,7 +99,7 @@ export default function NavbarArticle() {
             <Link href="/SectionMain">
               <Box sx={{ cursor: "pointer" }}>
                 <Image
-                  src={require("../../../assets/LogoPensook.png")}
+                  src={require("../assets/LogoPensook.png")}
                   width={155}
                   height={29}
                   alt="Picture of the author"
@@ -109,7 +108,7 @@ export default function NavbarArticle() {
             </Link>
             <Box
               sx={{
-                display: { md: "flex", lg: "none" },
+                display: { xs: "flex", lg: "none" },
                 justifyContent: "end",
               }}
             >
@@ -120,7 +119,7 @@ export default function NavbarArticle() {
                   aria-haspopup="true"
                   aria-expanded={open ? "true" : undefined}
                   onClick={handleClick}
-                  sx={{ mr: "64px" }}
+                  
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,11 +154,10 @@ export default function NavbarArticle() {
                 <Menu
                   sx={{
                     mt: 3,
-                    mr: 50,
                     "& .MuiPopover-paper": {
                       borderRadius: "8px",
                       width: "273px",
-                      height: "240px",
+                      height: {sm:"240px"},
                     },
                   }}
                   id="basic-menu"
@@ -176,7 +174,7 @@ export default function NavbarArticle() {
                       onClick={handleClose}
                       sx={{
                         px: "30px",
-                        py: "8.2px",
+                        py: {xs:"2px",sm:"8.2px"},
                         fontSize: 14,
                         fontWeight: 400,
                         color: "#222222",
@@ -190,7 +188,7 @@ export default function NavbarArticle() {
             </Box>
             <Box
               sx={{
-                display: { md: "none", lg: "flex" },
+                display: { xs: "none", lg: "flex" },
               }}
             >
               <Typography
@@ -204,7 +202,7 @@ export default function NavbarArticle() {
                   "&:hover": {
                     textDecoration: "underline",
                   },
-                  
+                  display: menuHome ? "flex" : "none",
                 }}
               >
                 HOME

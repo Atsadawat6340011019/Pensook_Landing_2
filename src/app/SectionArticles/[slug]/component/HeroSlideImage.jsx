@@ -10,6 +10,8 @@ import { useSpring, animated } from '@react-spring/web'
 import { useSpringCarousel } from 'react-spring-carousel'
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+
 async function getPostsData() {
   const response = await fetch("http://203.150.243.197:4000/landingPage/getArticleList");
 
@@ -29,6 +31,9 @@ function formatDate(dateString) {
   };
   return date.toLocaleDateString('en-GB', options); 
 }
+
+
+
 export default  function HeroSlideImage() {
   const [slidePost , setSlidePost] = useState ();
   const [resultState , setResultState] = useState ([]);
@@ -75,9 +80,7 @@ export default  function HeroSlideImage() {
 
   const currentItem = resultState?.response?.result?.[currentIndex];
 
-  if (!currentItem) {
-    return <div>No items to display</div>;
-  }
+  
 
   return (
     <>

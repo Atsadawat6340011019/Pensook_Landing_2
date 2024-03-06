@@ -1,12 +1,14 @@
+"use client"
+
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React , { useState , useEffect} from "react";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Link from 'next/link';
 
 async function getPostsData() {
-  const response = await fetch('http://203.150.243.197:4000/landingPage/getArticleList');
+  const response = await fetch("http://203.150.243.197:4000/landingPage/getArticleList");
 
   if (!response.ok) {
     throw new Error('Error');
@@ -26,26 +28,51 @@ function formatDate(dateString) {
 }
 
 
-export default async function CardArticle() {
+export default  function CardArticle() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [resultState , setResultState] = useState ([]);
 
-  const result = await getPostsData();
-    console.log('result ', result.response);
-    const sortedPosts = result.response.result.sort((a, b) => a.position - b.position);
+   const initResult = async () =>{
+    try{
+      const result = await getPostsData ()
+      setResultState(result)
+    } catch (error){}
+  }
+  useEffect(()=> {
+    initResult()
+
+  },[])
+  console.log(resultState)
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+    const sortedPosts = resultState?.response?.result?.sort((a, b) => a.position - b.position);
   return (
     <>
-    {sortedPosts.map((post, index) => (
+    {resultState?.response?.result?.map((post, index) => (
       <Link href={`/SectionArticles/${post._id}` } style={{ textDecoration: 'none' }}>
       <Paper
         key={index}
         elevation={3}
         sx={{
-          width: {md: 692,lg:506},
-          height: {md: 580,lg:580},
+          width: {xs:"90vw" ,md: 692,lg:506},
+          height: {xs: "70vh",md: 580,lg:580},
           p: 2.5,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          mr: 3,
+          mr: {xs:0,md:3},
           mt: 5,
           cursor: "pointer",
           "&.MuiPaper-root": {
@@ -87,7 +114,7 @@ export default async function CardArticle() {
           >
             
             <Typography
-              sx={{ fontSize: 14, fontWeight: 600, color: "#6941C6" }}
+              sx={{ fontSize: 14, fontWeight: 600, color: "#6941C6", }}
             >
               นวัตกรรมด้านการแพทย์
             </Typography>
@@ -101,10 +128,10 @@ export default async function CardArticle() {
             >
               
               <Typography
-                sx={{ fontSize: 24, fontWeight: 600, color: "#007DFC" }}
+                sx={{ fontSize: 24, fontWeight: 600, color: "#007DFC", }}
                 
               >
-                {post.label}
+                {post.label} บริษัท
               </Typography>
               
               <ArrowOutwardIcon
@@ -117,6 +144,7 @@ export default async function CardArticle() {
                 fontWeight: 400,
                 color: "#667085",
                 mt: 1,
+                
               }}
             >
               {post.content}
@@ -177,6 +205,7 @@ export default async function CardArticle() {
               fontWeight: 400,
               color: "#667085",
               ml: 1.5,
+              
             }}
           >
             {formatDate(post.createTime)}

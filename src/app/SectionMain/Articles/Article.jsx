@@ -1,6 +1,5 @@
 
 
-
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Paper from "@mui/material/Paper";
@@ -29,12 +28,14 @@ export default function Article() {
           pt:3.5,
           flexDirection: "column",
           overflow:"hidden",
+          pb:10,
+          
         }}
       >
-        <Typography sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50},fontWeight: 700, color: "#007DFC" }}>
+        <Typography sx={{ fontSize: {xs:24,md:30,lg:35,xl:40,xxl:50},fontWeight: 700, color: "#007DFC" ,textAlign:"center"}}>
           บทความที่น่าสนใจ
         </Typography>
-        <Typography sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#915BD7" }}>
+        <Typography sx={{ fontSize: {xs:16,md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#915BD7" ,textAlign:"center"}}>
           บทความเกี่ยวกับนวัตกรรมในด้านการแพทย์ และการดูแลสุขภาพ
         </Typography>
         <Box
@@ -45,7 +46,7 @@ export default function Article() {
             flexWrap: "wrap",
           }}
         >
-          {Array.from({ length: 1 }).map((_, index) => (
+          {Array.from({ length: 1  }).map((_, index) => (
       <CardArticle key={index} />
     ))}
          
@@ -58,7 +59,7 @@ export default function Article() {
           </Box>
         </Box>
         
-        <Button
+        {/* <Button
           variant="contained"
           endIcon={<ArrowDownwardIcon sx={{ color: "#6941C6" }} />}
           sx={{
@@ -78,7 +79,7 @@ export default function Article() {
           <Typography sx={{ fontSize: 18, fontWeight: 500, color: "#6941C6" }}>
             แสดงเพิ่มเติม
           </Typography>
-        </Button>
+        </Button> */}
       </Box>
      
     </>

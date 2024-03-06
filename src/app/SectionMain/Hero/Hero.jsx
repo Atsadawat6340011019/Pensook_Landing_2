@@ -1,5 +1,5 @@
 "use client";
-
+import { Noto_Sans_Thai } from 'next/font/google'
 import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -9,6 +9,14 @@ import NextLink from "next/link";
 import Image from "next/image";
 import ParticleAnimation from "./ParticleAnimation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+
 export default function Hero() {
   const Responsive = createTheme({
     breakpoints: {
@@ -21,10 +29,13 @@ export default function Hero() {
         xxl: 1800,
       },
     },
-    typography: {
-      fontFamily: "Noto Sans Thai, sans-serif",
-    },
+    
+    
   });
+
+  
+
+  
 
   return (
     <>
@@ -88,7 +99,9 @@ export default function Hero() {
                     color: "#FFFFFF",
                     opacity: 1,
                     pb: 3.5,
+                    
                   }}
+                 
                 >
                   MAKE THE WORLD A BETTER PLACE
                 </Typography>
@@ -98,7 +111,9 @@ export default function Hero() {
                     fontWeight: 500,
                     color: "#FFFFFF",
                     opacity: 1,
+                    
                   }}
+                  className={noto_Sans_Thai.className}
                 >
                   “ เมื่อเรามีจุดมุ่งหมายที่ร่วมกัน
                 </Typography>
@@ -108,7 +123,7 @@ export default function Hero() {
                     fontWeight: 500,
                     color: "#FFFFFF",
                     opacity: 1,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   เราสามารถเปลี่ยนแปลงโลกใบนี้ให้เป็นสถานที่ที่สวยงามยิ่งขึ้นทั้งสำหรับ
                 </Typography>
@@ -118,7 +133,7 @@ export default function Hero() {
                     fontWeight: 500,
                     color: "#FFFFFF",
                     opacity: 1,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   เราและลูกหลานของเรา ”
                 </Typography>

@@ -9,6 +9,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Noto_Sans_Thai } from "next/font/google";
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function ProductDetail3() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const Responsive = createTheme({
@@ -108,7 +115,7 @@ export default function ProductDetail3() {
           pb: 3,
         }}
       >
-        <Typography sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#007DFC" }}>
+        <Typography sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#007DFC" }}className={noto_Sans_Thai.className}>
           Medical Automation Machine
         </Typography>
         <Box
@@ -122,30 +129,30 @@ export default function ProductDetail3() {
         >
           <Box sx={{ display: "flex" }}>
             <Typography
-              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#007DFC" }}
+              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
             >
-              Smart Medical Cabinet
+              Pharmacy Vending Machine
             </Typography>
             <Typography
-              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471", ml: 1 }}
+              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471", ml: 1 }}className={noto_Sans_Thai.className}
             >
               เป็นตู้จ่ายแบบอัตโมมัติที่จะช่วยลดเวลารอรับยา ช่วยเพิ่มความ
             </Typography>
           </Box>
           <Typography
-            sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471", mt: 1 }}
+            sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471", mt: 1 }}className={noto_Sans_Thai.className}
           >
             แม่นยำในการจ่ายยา สามารถบันทึกข้อมูลและแสดงรายงานต่าง ๆ
             เกี่ยวกับการจ่ายยา อาทิเช่น การตรวจสอบ
           </Typography>
           <Box sx={{ display: "flex", mt: 1 }}>
             <Typography
-              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471" }}
+              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#5D6471" }}className={noto_Sans_Thai.className}
             >
               ความถูกต้องของการจ่ายยา ปริมาณยาที่ถูกใช้ไป รวมถึงสามารถ
             </Typography>
             <Typography
-              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#007DFC" }}
+              sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
             >
               แจ้งเตือนเมื่อยาใกล้หมดไปที่คลังยา
             </Typography>
@@ -210,17 +217,17 @@ export default function ProductDetail3() {
             </Box>
 
             <Typography
-              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}
+              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}className={noto_Sans_Thai.className}
             >
               ลดเวลาในการจ่ายยา
             </Typography>
             <Typography
-              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}
+              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}className={noto_Sans_Thai.className}
             >
               สามารถจ่ายยาให้ผู้ป่วยในปริมาณที่
             </Typography>
             <Typography
-              sx={{ fontSize: 18, fontWeight: 400, color: "#334258" }}
+              sx={{ fontSize: 18, fontWeight: 400, color: "#334258" }}className={noto_Sans_Thai.className}
             >
               มากขึ้น ในเวลาที่น้อยลง
             </Typography>
@@ -270,12 +277,12 @@ export default function ProductDetail3() {
               </Box>
             </Box>
             <Typography
-              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}
+              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}className={noto_Sans_Thai.className}
             >
               เพิ่มความแม่นยำ
             </Typography>
             <Typography
-              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}
+              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}className={noto_Sans_Thai.className}
             >
               ลดความผิดพลาด จากการจ่ายยาผิด
             </Typography>
@@ -330,17 +337,17 @@ export default function ProductDetail3() {
               </Box>
             </Box>
             <Typography
-              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}
+              sx={{ fontSize: 20, fontWeight: 700, color: "#007DFC", mt: 3 }}className={noto_Sans_Thai.className}
             >
               ผลักดันเทคโนโลยี
             </Typography>
             <Typography
-              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}
+              sx={{ fontSize: 18, fontWeight: 400, color: "#334258", mt: 1.5 }}className={noto_Sans_Thai.className}
             >
               เพื่อผลักดันเทคโนโลยีการรักษาทางไกล
             </Typography>
             <Typography
-              sx={{ fontSize: 18, fontWeight: 400, color: "#334258" }}
+              sx={{ fontSize: 18, fontWeight: 400, color: "#334258" }}className={noto_Sans_Thai.className}
             >
               telemedicine ในการจ่ายยาและรับยา
             </Typography>
@@ -418,43 +425,40 @@ export default function ProductDetail3() {
           >
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  width="60"
-                  height="60"
-                  fill="none"
-                  viewBox="0 0 92 92"
-                >
-                  <rect width="92" height="92" fill="#007DFC" rx="46"></rect>
-                  <path fill="url(#pattern0)" d="M10 7H82V79H10z"></path>
-                  <defs>
-                    <pattern
-                      id="pattern0"
-                      width="1"
-                      height="1"
-                      patternContentUnits="objectBoundingBox"
-                    >
-                      <use
-                        transform="scale(.01563)"
-                        xlinkHref="#image0_2442_22221"
-                      ></use>
-                    </pattern>
-                    <image
-                      id="image0_2442_22221"
-                      width="64"
-                      height="64"
-                      xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASlSURBVHic7ZtBb1VFFMfPbRV2TaAkJG+NNipG1wbd2EUrBb+BO/aQNrKEDYqfwO4sn0EjSqEkoCArTUS3urDGNFil2lAb4edizvDG+2Ze7333zH3vhf43b+6cM3PP+ffMmbnn3orsYx8mAL6mPdy2sruwmgjAaq4qKIrCxPbnLCYJYWVYCtZET1hONo4wj4DcsI6wZz4CxoYA4EpkN1gZtl1P4S0ynK8DvAtMAhPAowgBj1Q2qbodq/sPYrAZAcCLwLpOeRN4Xdsbgc6G9h0HvtD2b8DLFjYMYrQJAcBM4Pxj/X2ov/cCvXslmdddB2aq3m+kcoCG8JqIdETkuojMiMhdEZlSlW8Ddd+eUp0ZHdMRkbXWl4NFBOg6BvgXOKZ9B4BF4AxwMNA9qH2LwAHtO6ZjAU4386i+8RYETACf61R3vWMqmwOuAdvAprbnA/nzwG0dex2YbGLLIMZbEFAArwJbOt2i9n9AHE+AC6qzpH1bOkfWI7k5cPv8TsnBM8CCtv8B3sdtj9PAWWBXSZhX3RA7wJVh+1UZgeEbuAz/MW6d39D+85Ex51T2peou61i/RdaPSFzS+Qj4NRF2WRGx54GKerI6cERlf/YhFNzWeJkgp/Qj4HI7rsYRsecvFU1HZNMq+2MPAjw+rEKAP4S8saeyIQIj/RJYxoX1Te0/GxnjE99V+iwB4IRerlc2JIOPe913hXgSPKXtXdyaP4wL/UVcYgSYJZ4EV2r7NSgBFsSR3gYvkcZF1em7DY4LARO4cIbeg9BJ3I6whUuMq/QehG7p2J6D0LgQkDoKL5E+Ci9R4Sg8LgR06CbhVXXoThDuy4HuctB/R3VX9Xqd0raZnQArkOlxeGwIUBteAH5RU9YwKIhkI4BMtTqMS2JmBFgbVhW4c0IZn9QY35wAxrFW17WrGQG0XKuzRsqvSjVBRqhWV/kvaXkDRqhWNygBjZYA/Wt1C7it6gHwNy43nArkprW6YRFQt1YHcEl1TGt1rRNAulY3p+0d3GPqFHBI27sqO4lxrW4YBHiUa3XXtP9cZA5fq7uBVa2uriODjksRENHzy+FQROZrdQ+rzl8Xtbzv44fFq7HYmvZJctdg/hjMPpKqTAClWp2IfKOi9yLqvu+78hIoKxaD4a36rlZEJERTtbp53EsJX6s7gntOOE+3Vpd6YbGSzYGKftVSJL0NXlASYrioOrW2wcRcA8OKgH61ujncm5lN3GHoKjAbyPvW6saFgGy1urbQlIBstbq20IgA7W/lcZgE9pJXHdeIKTLU6saKAJXXLYmdZpifr3XttiEgot+oVtcWUn717MleKfdX3ynUIb8KvB8pv0bqM7lhYOS+Fm878p75CHhKAFq3C65zIfkoS8b/Oyr5dctfF4HgdxE5bEpvAqkwDw3NjM2iKP7/zRHdyu3bue5a96+V4f6z5QgIc8AP+vtKLgNE5KsKOmbVngj8afRH3xHuAtkJKIrizVxzV8Rx/b3fI6H7KdlPwNF27coP4Cjws/p4wveHSXBSRL4XkZeGYWCLuC8irxVF8UQkyAFFUTwWkXdE5DMR2R6ObVmxLSKfisiCd34f+xD5D9mYSn1x1UtFAAAAAElFTkSuQmCC"
-                    ></image>
-                  </defs>
-                </svg>
+              <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="60"
+      height="60"
+      fill="none"
+      viewBox="0 0 46 46"
+    >
+      <rect width="46" height="46" fill="#007DFC" rx="23"></rect>
+      <path fill="url(#pattern209)" d="M8 8H38V38H8z"></path>
+      <defs>
+        <pattern
+          id="pattern209"
+          width="1"
+          height="1"
+          patternContentUnits="objectBoundingBox"
+        >
+          <use transform="scale(.01563)" xlinkHref="#image0_2442_6754"></use>
+        </pattern>
+        <image
+          id="image0_2442_6754"
+          width="64"
+          height="64"
+          xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASlSURBVHic7ZtBb1VFFMfPbRV2TaAkJG+NNipG1wbd2EUrBb+BO/aQNrKEDYqfwO4sn0EjSqEkoCArTUS3urDGNFil2lAb4edizvDG+2Ze7333zH3vhf43b+6cM3PP+ffMmbnn3orsYx8mAL6mPdy2sruwmgjAaq4qKIrCxPbnLCYJYWVYCtZET1hONo4wj4DcsI6wZz4CxoYA4EpkN1gZtl1P4S0ynK8DvAtMAhPAowgBj1Q2qbodq/sPYrAZAcCLwLpOeRN4Xdsbgc6G9h0HvtD2b8DLFjYMYrQJAcBM4Pxj/X2ov/cCvXslmdddB2aq3m+kcoCG8JqIdETkuojMiMhdEZlSlW8Ddd+eUp0ZHdMRkbXWl4NFBOg6BvgXOKZ9B4BF4AxwMNA9qH2LwAHtO6ZjAU4386i+8RYETACf61R3vWMqmwOuAdvAprbnA/nzwG0dex2YbGLLIMZbEFAArwJbOt2i9n9AHE+AC6qzpH1bOkfWI7k5cPv8TsnBM8CCtv8B3sdtj9PAWWBXSZhX3RA7wJVh+1UZgeEbuAz/MW6d39D+85Ex51T2peou61i/RdaPSFzS+Qj4NRF2WRGx54GKerI6cERlf/YhFNzWeJkgp/Qj4HI7rsYRsecvFU1HZNMq+2MPAjw+rEKAP4S8saeyIQIj/RJYxoX1Te0/GxnjE99V+iwB4IRerlc2JIOPe913hXgSPKXtXdyaP4wL/UVcYgSYJZ4EV2r7NSgBFsSR3gYvkcZF1em7DY4LARO4cIbeg9BJ3I6whUuMq/QehG7p2J6D0LgQkDoKL5E+Ci9R4Sg8LgR06CbhVXXoThDuy4HuctB/R3VX9Xqd0raZnQArkOlxeGwIUBteAH5RU9YwKIhkI4BMtTqMS2JmBFgbVhW4c0IZn9QY35wAxrFW17WrGQG0XKuzRsqvSjVBRqhWV/kvaXkDRqhWNygBjZYA/Wt1C7it6gHwNy43nArkprW6YRFQt1YHcEl1TGt1rRNAulY3p+0d3GPqFHBI27sqO4lxrW4YBHiUa3XXtP9cZA5fq7uBVa2uriODjksRENHzy+FQROZrdQ+rzl8Xtbzv44fFq7HYmvZJctdg/hjMPpKqTAClWp2IfKOi9yLqvu+78hIoKxaD4a36rlZEJERTtbp53EsJX6s7gntOOE+3Vpd6YbGSzYGKftVSJL0NXlASYrioOrW2wcRcA8OKgH61ujncm5lN3GHoKjAbyPvW6saFgGy1urbQlIBstbq20IgA7W/lcZgE9pJXHdeIKTLU6saKAJXXLYmdZpifr3XttiEgot+oVtcWUn717MleKfdX3ynUIb8KvB8pv0bqM7lhYOS+Fm878p75CHhKAFq3C65zIfkoS8b/Oyr5dctfF4HgdxE5bEpvAqkwDw3NjM2iKP7/zRHdyu3bue5a96+V4f6z5QgIc8AP+vtKLgNE5KsKOmbVngj8afRH3xHuAtkJKIrizVxzV8Rx/b3fI6H7KdlPwNF27coP4Cjws/p4wveHSXBSRL4XkZeGYWCLuC8irxVF8UQkyAFFUTwWkXdE5DMR2R6ObVmxLSKfisiCd34f+xD5D9mYSn1x1UtFAAAAAElFTkSuQmCC"
+        ></image>
+      </defs>
+    </svg>
                 <Typography
                   sx={{
                     fontSize: 35,
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 2,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Technical Specification
                 </Typography>
@@ -485,7 +489,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -537,7 +541,7 @@ export default function ProductDetail3() {
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 2,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Technology
                 </Typography>
@@ -568,7 +572,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -620,7 +624,7 @@ export default function ProductDetail3() {
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 2,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   User Care
                 </Typography>
@@ -651,7 +655,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -674,7 +678,7 @@ export default function ProductDetail3() {
                     color: "#915BD7",
                     ml: 2,
                     borderBottom: "5px solid #915BD7",
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Special Service
                 </Typography>
@@ -705,7 +709,7 @@ export default function ProductDetail3() {
                                 fontSize: 24,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -741,13 +745,47 @@ export default function ProductDetail3() {
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 
+              <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="60"
+      height="60"
+      fill="none"
+      viewBox="0 0 46 46"
+    >
+      <rect width="46" height="46" fill="#007DFC" rx="23"></rect>
+      <path fill="url(#pattern209)" d="M8 8H38V38H8z"></path>
+      <defs>
+        <pattern
+          id="pattern209"
+          width="1"
+          height="1"
+          patternContentUnits="objectBoundingBox"
+        >
+          <use transform="scale(.01563)" xlinkHref="#image0_2442_6754"></use>
+        </pattern>
+        <image
+          id="image0_2442_6754"
+          width="64"
+          height="64"
+          xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASlSURBVHic7ZtBb1VFFMfPbRV2TaAkJG+NNipG1wbd2EUrBb+BO/aQNrKEDYqfwO4sn0EjSqEkoCArTUS3urDGNFil2lAb4edizvDG+2Ze7333zH3vhf43b+6cM3PP+ffMmbnn3orsYx8mAL6mPdy2sruwmgjAaq4qKIrCxPbnLCYJYWVYCtZET1hONo4wj4DcsI6wZz4CxoYA4EpkN1gZtl1P4S0ynK8DvAtMAhPAowgBj1Q2qbodq/sPYrAZAcCLwLpOeRN4Xdsbgc6G9h0HvtD2b8DLFjYMYrQJAcBM4Pxj/X2ov/cCvXslmdddB2aq3m+kcoCG8JqIdETkuojMiMhdEZlSlW8Ddd+eUp0ZHdMRkbXWl4NFBOg6BvgXOKZ9B4BF4AxwMNA9qH2LwAHtO6ZjAU4386i+8RYETACf61R3vWMqmwOuAdvAprbnA/nzwG0dex2YbGLLIMZbEFAArwJbOt2i9n9AHE+AC6qzpH1bOkfWI7k5cPv8TsnBM8CCtv8B3sdtj9PAWWBXSZhX3RA7wJVh+1UZgeEbuAz/MW6d39D+85Ex51T2peou61i/RdaPSFzS+Qj4NRF2WRGx54GKerI6cERlf/YhFNzWeJkgp/Qj4HI7rsYRsecvFU1HZNMq+2MPAjw+rEKAP4S8saeyIQIj/RJYxoX1Te0/GxnjE99V+iwB4IRerlc2JIOPe913hXgSPKXtXdyaP4wL/UVcYgSYJZ4EV2r7NSgBFsSR3gYvkcZF1em7DY4LARO4cIbeg9BJ3I6whUuMq/QehG7p2J6D0LgQkDoKL5E+Ci9R4Sg8LgR06CbhVXXoThDuy4HuctB/R3VX9Xqd0raZnQArkOlxeGwIUBteAH5RU9YwKIhkI4BMtTqMS2JmBFgbVhW4c0IZn9QY35wAxrFW17WrGQG0XKuzRsqvSjVBRqhWV/kvaXkDRqhWNygBjZYA/Wt1C7it6gHwNy43nArkprW6YRFQt1YHcEl1TGt1rRNAulY3p+0d3GPqFHBI27sqO4lxrW4YBHiUa3XXtP9cZA5fq7uBVa2uriODjksRENHzy+FQROZrdQ+rzl8Xtbzv44fFq7HYmvZJctdg/hjMPpKqTAClWp2IfKOi9yLqvu+78hIoKxaD4a36rlZEJERTtbp53EsJX6s7gntOOE+3Vpd6YbGSzYGKftVSJL0NXlASYrioOrW2wcRcA8OKgH61ujncm5lN3GHoKjAbyPvW6saFgGy1urbQlIBstbq20IgA7W/lcZgE9pJXHdeIKTLU6saKAJXXLYmdZpifr3XttiEgot+oVtcWUn717MleKfdX3ynUIb8KvB8pv0bqM7lhYOS+Fm878p75CHhKAFq3C65zIfkoS8b/Oyr5dctfF4HgdxE5bEpvAqkwDw3NjM2iKP7/zRHdyu3bue5a96+V4f6z5QgIc8AP+vtKLgNE5KsKOmbVngj8afRH3xHuAtkJKIrizVxzV8Rx/b3fI6H7KdlPwNF27coP4Cjws/p4wveHSXBSRL4XkZeGYWCLuC8irxVF8UQkyAFFUTwWkXdE5DMR2R6ObVmxLSKfisiCd34f+xD5D9mYSn1x1UtFAAAAAElFTkSuQmCC"
+        ></image>
+      </defs>
+    </svg>
+
+
+
+
+
+
+
                 <Typography
                   sx={{
                     fontSize: 35,
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 2,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Technical Specification
                 </Typography>
@@ -778,7 +816,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -794,14 +832,40 @@ export default function ProductDetail3() {
 
             <Box sx={{ display: "flex", flexDirection: "column", mt: 5 }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
-                
+              <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="60"
+      height="60"
+      fill="none"
+      viewBox="0 0 46 46"
+    >
+      <rect width="46" height="46" fill="#007DFC" rx="23"></rect>
+      <path fill="url(#pattern209)" d="M8 8H38V38H8z"></path>
+      <defs>
+        <pattern
+          id="pattern209"
+          width="1"
+          height="1"
+          patternContentUnits="objectBoundingBox"
+        >
+          <use transform="scale(.01563)" xlinkHref="#image0_2442_6754"></use>
+        </pattern>
+        <image
+          id="image0_2442_6754"
+          width="64"
+          height="64"
+          xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASlSURBVHic7ZtBb1VFFMfPbRV2TaAkJG+NNipG1wbd2EUrBb+BO/aQNrKEDYqfwO4sn0EjSqEkoCArTUS3urDGNFil2lAb4edizvDG+2Ze7333zH3vhf43b+6cM3PP+ffMmbnn3orsYx8mAL6mPdy2sruwmgjAaq4qKIrCxPbnLCYJYWVYCtZET1hONo4wj4DcsI6wZz4CxoYA4EpkN1gZtl1P4S0ynK8DvAtMAhPAowgBj1Q2qbodq/sPYrAZAcCLwLpOeRN4Xdsbgc6G9h0HvtD2b8DLFjYMYrQJAcBM4Pxj/X2ov/cCvXslmdddB2aq3m+kcoCG8JqIdETkuojMiMhdEZlSlW8Ddd+eUp0ZHdMRkbXWl4NFBOg6BvgXOKZ9B4BF4AxwMNA9qH2LwAHtO6ZjAU4386i+8RYETACf61R3vWMqmwOuAdvAprbnA/nzwG0dex2YbGLLIMZbEFAArwJbOt2i9n9AHE+AC6qzpH1bOkfWI7k5cPv8TsnBM8CCtv8B3sdtj9PAWWBXSZhX3RA7wJVh+1UZgeEbuAz/MW6d39D+85Ex51T2peou61i/RdaPSFzS+Qj4NRF2WRGx54GKerI6cERlf/YhFNzWeJkgp/Qj4HI7rsYRsecvFU1HZNMq+2MPAjw+rEKAP4S8saeyIQIj/RJYxoX1Te0/GxnjE99V+iwB4IRerlc2JIOPe913hXgSPKXtXdyaP4wL/UVcYgSYJZ4EV2r7NSgBFsSR3gYvkcZF1em7DY4LARO4cIbeg9BJ3I6whUuMq/QehG7p2J6D0LgQkDoKL5E+Ci9R4Sg8LgR06CbhVXXoThDuy4HuctB/R3VX9Xqd0raZnQArkOlxeGwIUBteAH5RU9YwKIhkI4BMtTqMS2JmBFgbVhW4c0IZn9QY35wAxrFW17WrGQG0XKuzRsqvSjVBRqhWV/kvaXkDRqhWNygBjZYA/Wt1C7it6gHwNy43nArkprW6YRFQt1YHcEl1TGt1rRNAulY3p+0d3GPqFHBI27sqO4lxrW4YBHiUa3XXtP9cZA5fq7uBVa2uriODjksRENHzy+FQROZrdQ+rzl8Xtbzv44fFq7HYmvZJctdg/hjMPpKqTAClWp2IfKOi9yLqvu+78hIoKxaD4a36rlZEJERTtbp53EsJX6s7gntOOE+3Vpd6YbGSzYGKftVSJL0NXlASYrioOrW2wcRcA8OKgH61ujncm5lN3GHoKjAbyPvW6saFgGy1urbQlIBstbq20IgA7W/lcZgE9pJXHdeIKTLU6saKAJXXLYmdZpifr3XttiEgot+oVtcWUn717MleKfdX3ynUIb8KvB8pv0bqM7lhYOS+Fm878p75CHhKAFq3C65zIfkoS8b/Oyr5dctfF4HgdxE5bEpvAqkwDw3NjM2iKP7/zRHdyu3bue5a96+V4f6z5QgIc8AP+vtKLgNE5KsKOmbVngj8afRH3xHuAtkJKIrizVxzV8Rx/b3fI6H7KdlPwNF27coP4Cjws/p4wveHSXBSRL4XkZeGYWCLuC8irxVF8UQkyAFFUTwWkXdE5DMR2R6ObVmxLSKfisiCd34f+xD5D9mYSn1x1UtFAAAAAElFTkSuQmCC"
+        ></image>
+      </defs>
+    </svg>
                 <Typography
                   sx={{
                     fontSize: 35,
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 2,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Technology
                 </Typography>
@@ -832,7 +896,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -855,7 +919,7 @@ export default function ProductDetail3() {
                     fontWeight: 600,
                     color: "#007DFC",
                     ml: 10,
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   User Care
                 </Typography>
@@ -886,7 +950,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>
@@ -911,7 +975,7 @@ export default function ProductDetail3() {
                     color: "#915BD7",
                     ml: 15,
                     borderBottom: "5px solid #915BD7",
-                  }}
+                  }}className={noto_Sans_Thai.className}
                 >
                   Service List
                 </Typography>
@@ -942,7 +1006,7 @@ export default function ProductDetail3() {
                                 fontSize: 18,
                                 fontWeight: 500,
                                 color: "#475467",
-                              }}
+                              }}className={noto_Sans_Thai.className}
                             >
                               {item.text}
                             </Typography>

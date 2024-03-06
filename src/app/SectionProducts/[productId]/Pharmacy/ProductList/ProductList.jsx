@@ -7,8 +7,13 @@ import Image from "next/image";
 import CardProductList from "./components/CardProductList";
 import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Noto_Sans_Thai } from "next/font/google";
 
-
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function ProductList3() {
 
   const Responsive = createTheme({
@@ -44,6 +49,7 @@ export default function ProductList3() {
       >
         <Typography
           sx={{ color: "#0A5D87", fontSize: 40, fontWeight: 500, mt: 10 }}
+          className={noto_Sans_Thai.className}
         >
           ผลิตภัณฑ์อื่น ๆ ที่แนะนำ
         </Typography>
@@ -95,6 +101,7 @@ export default function ProductList3() {
             >
               <Typography
                 sx={{ color: "#222222", fontSize: 16, fontWeight: 400 }}
+                className={noto_Sans_Thai.className}
               >
                 ชีวิตดี ๆ เริ่มต้นที่
               </Typography>
@@ -105,6 +112,7 @@ export default function ProductList3() {
                   fontSize: 16,
                   fontWeight: 400,
                 }}
+                className={noto_Sans_Thai.className}
               >
                 เป็นสุข
               </Typography>

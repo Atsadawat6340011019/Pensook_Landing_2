@@ -7,6 +7,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import Link from 'next/link';
+
 async function getPostsData() {
   const response = await fetch('http://203.150.243.197:4000/landingPage/getArticleList');
 
@@ -26,6 +27,7 @@ function formatDate(dateString) {
   };
   return date.toLocaleDateString('en-GB', options); 
 }
+
 
 export default async function CardArticleRecommend() {
 

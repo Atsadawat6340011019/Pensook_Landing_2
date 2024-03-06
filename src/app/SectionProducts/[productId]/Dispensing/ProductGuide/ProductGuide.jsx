@@ -5,6 +5,16 @@ import React from "react";
 import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { Noto_Sans_Thai } from "next/font/google";
+
+
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function ProductGuide2() {
 
   const Responsive = createTheme({
@@ -41,25 +51,25 @@ export default function ProductGuide2() {
       >
         <Box sx={{ display: "flex", pt: 10 }}>
           <Typography
-            sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#0A5D87", mr: 1 }}
+            sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#0A5D87", mr: 1 }}className={noto_Sans_Thai.className}
           >
             สนใจใช้
           </Typography>
-          <Typography sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#007DFC" }}>
+          <Typography sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#007DFC" }}className={noto_Sans_Thai.className}>
             PENSOOK
           </Typography>
           <Typography
-            sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#0A5D87", ml: 1 }}
+            sx={{ fontSize: {md:30,lg:35,xl:40,xxl:50}, fontWeight: 700, color: "#0A5D87", ml: 1 }}className={noto_Sans_Thai.className}
           >
             ง่ายนิดเดียว
           </Typography>
         </Box>
 
         <Box sx={{ display: "flex", pt: 1 }}>
-          <Typography sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#0A5D87",zIndex:2 }}>
+          <Typography sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#0A5D87",zIndex:2 }}className={noto_Sans_Thai.className}>
             โลเร็ม อิปซัมเรานำเสนอเทคโนโลยีทางการแพทย์ที่
           </Typography>
-          <Typography sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#007DFC",zIndex:2 }}>
+          <Typography sx={{ fontSize: {md:20,lg:25,xl:30,xxl:40}, fontWeight: 500, color: "#007DFC",zIndex:2 }}className={noto_Sans_Thai.className}>
             ทันสมัยและมีความน่าเชื่อถือ
           </Typography>
         </Box>
@@ -171,12 +181,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ติดต่อฝ่ายขาย
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   ติดต่อโทร 0859056507 หรือ Email pensookcare@gmail.com
                 </Typography>
@@ -207,12 +217,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   เลือก Spec ที่ต้องการ
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   เลือกรุ่นของผลิตภัณฑ์ หรือ ปรับเปลี่ยน Spec ตามต้องการ
                 </Typography>
@@ -243,12 +253,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ยืนยันการสั่งซื้อ
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   สามารถยืนยันการสั่งซื้อได้ในใบเสนอราคา
                 </Typography>
@@ -279,12 +289,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ชำระเงิน
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   โอนเข้าบัญชีบริษัท
                 </Typography>
@@ -315,12 +325,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   เริ่มใช้งาน
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   ส่งข้อมูลเบื้องต้นให้ฝ่ายซัพพอร์ตบรรจุลงระบบและเริ่มต้นใช้งาน
                 </Typography>
@@ -409,12 +419,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ติดต่อฝ่ายขาย
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   ติดต่อโทร 0859056507 หรือ Email pensookcare@gmail.com
                 </Typography>
@@ -445,12 +455,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   เลือก Spec ที่ต้องการ
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   เลือกรุ่นของผลิตภัณฑ์ หรือ ปรับเปลี่ยน Spec ตามต้องการ
                 </Typography>
@@ -481,12 +491,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ยืนยันการสั่งซื้อ
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   สามารถยืนยันการสั่งซื้อได้ในใบเสนอราคา
                 </Typography>
@@ -517,12 +527,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   ชำระเงิน
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   โอนเข้าบัญชีบริษัท
                 </Typography>
@@ -553,12 +563,12 @@ export default function ProductGuide2() {
                 sx={{ display: "flex", flexDirection: "column", ml: "18px" }}
               >
                 <Typography
-                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}
+                  sx={{ fontSize: 35, fontWeight: 600, color: "#007DFC" }}className={noto_Sans_Thai.className}
                 >
                   เริ่มใช้งาน
                 </Typography>
                 <Typography
-                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}
+                  sx={{ fontSize: 18, fontWeight: 500, color: "#000000" }}className={noto_Sans_Thai.className}
                 >
                   ส่งข้อมูลเบื้องต้นให้ฝ่ายซัพพอร์ตบรรจุลงระบบและเริ่มต้นใช้งาน
                 </Typography>

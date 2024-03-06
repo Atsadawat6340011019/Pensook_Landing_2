@@ -6,6 +6,15 @@ import Image from "next/image";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useRouter } from "next/navigation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Noto_Sans_Thai } from "next/font/google";
+
+
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function HeroProduct() {
   const router = useRouter();
 
@@ -231,11 +240,13 @@ export default function HeroProduct() {
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection:{md:"column",lg:"row"},
-                
-                ml:{md:10,lg:0}
+               
+                width:"100%"
+               
               }}
             >
-              <Box sx={{ pl: {md:5,lg:3} ,width:{md:211,lg:373}, height: {md:281,lg:497}}}>
+              <Box sx={{display: "flex",
+                  justifyContent: "center",ml: {md:5,lg:15} ,width:{md:211,lg:373}, height: {md:281,lg:497}}}>
                 <Image
                   src={require("../../../assets/SmartMedical.png")}
                   
@@ -246,19 +257,20 @@ export default function HeroProduct() {
                 sx={{
                   display: "flex",
                   justifyContent: "start",
-                  ml: {lg:20,xl:30,xxl:50},
-                  width: "30vw",
+                  ml: {xl:20,xxl:40},
+                  width: "40vw",
                   flexDirection: "column",
-                  mt:{md:10,lg:0}
+                  mt:{md:10,lg:0},
+                  alignItems: "center",
                 }}
               >
                 <Typography
-                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}
+                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}className={noto_Sans_Thai.className}
                 >
                   Medical Automation Machine
                 </Typography>
                 <Typography
-                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}
+                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}className={noto_Sans_Thai.className}
                 >
                   Smart Medical Cabinet
                 </Typography>
@@ -296,12 +308,12 @@ export default function HeroProduct() {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}
+                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}className={noto_Sans_Thai.className}
                 >
                   Medical Automation Machine
                 </Typography>
                 <Typography
-                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}
+                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}className={noto_Sans_Thai.className}
                 >
                   Automated Dispensing System Technology
                 </Typography>
@@ -341,12 +353,12 @@ export default function HeroProduct() {
                 }}
               >
                 <Typography
-                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}
+                  sx={{ fontSize: {md:18,lg:30}, fontWeight: 500, color: "#6F6F6F" }}className={noto_Sans_Thai.className}
                 >
                   Medical Automation Machine
                 </Typography>
                 <Typography
-                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}
+                  sx={{ fontSize: {md:30,lg:40,xl:45}, fontWeight: 600, color: "#915BD7" }}className={noto_Sans_Thai.className}
                 >
                   Pharmacy Vending Machine
                 </Typography>
@@ -436,8 +448,9 @@ export default function HeroProduct() {
             display: "flex",
             justifyContent: "start",
             position: "absolute",
-            mt: "75vh",
+            top:"95%",
             zIndex: 5,
+            height:"100%",
           }}
         >
           <FiberManualRecordIcon

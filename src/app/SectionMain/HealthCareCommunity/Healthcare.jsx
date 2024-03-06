@@ -1,5 +1,7 @@
 "use client";
 
+
+import { Noto_Sans_Thai } from 'next/font/google'
 import { Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
@@ -7,9 +9,18 @@ import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weights: ['400', '500' , '600' , '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 export default function Healthcare() {
   const router = useRouter();
   const [count, setCount] = useState(50);
+
+ 
+
 
   const Responsive = createTheme({
     breakpoints: {
@@ -22,9 +33,7 @@ export default function Healthcare() {
         xxl: 1800,
       },
     },
-    typography: {
-      fontFamily: ["Roboto", "Noto Sans Thai", "sans-serif"].join(","),
-    },
+    
   });
 
   const redirectToPensookSocial = () => {
@@ -44,26 +53,27 @@ export default function Healthcare() {
       <ThemeProvider theme={Responsive}>
         <Box
           id="HealthCare-section"
-          sx={{ marginTop: "auto", height: { md: "40px", lg: "80px" } }}
+          sx={{ marginTop: "auto", height: { md: "40px", lg: "80px"  ,overflowX: "hidden"} }}
         ></Box>
-        <Box
+         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             width: "100vw",
-            height: { md: 660, lg: "100vh" },
+            height: "100%",
             pt: 2,
-            overflow: "hidden",
+            overflowX: "hidden", 
+            
           }}
-        >
-          <Box sx={{display:{xs:"none",sm:"flex"},flexDirection:"column",alignItems: "center",justifyContent: "center",}}>
+        > 
+           <Box sx={{display:{xs:"none",sm:"flex"},flexDirection:"column",alignItems: "center",justifyContent: "center",width:"100%"}}>
           <Typography
             sx={{
               fontSize: { xs:24,md: 30, lg: 35, xl: 45, xxl: 50 },
               fontWeight: 700,
               color: "#007DFC",
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             HEALTHCARE COMMUNITIES
           </Typography>
@@ -75,7 +85,7 @@ export default function Healthcare() {
               fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
               fontWeight: 500,
               pt: "10px",
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             เข้าถึงผู้ป่วยของคุณได้มากกว่า ที่
             <Typography
@@ -84,7 +94,7 @@ export default function Healthcare() {
                 fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
                 fontWeight: 500,
                 ml: {xs:0,md:1},
-              }}
+              }}className={noto_Sans_Thai.className}
             >
               Pensook Healthcare Communities
             </Typography>
@@ -96,19 +106,19 @@ export default function Healthcare() {
               fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
               fontWeight: 500,
               mt: "15px",
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             พื้นที่แบ่งปันความรู้และประสบการณ์ในการดูแลสุขภาพ
           </Typography>
-            </Box>
-              <Box sx={{display:{xs:"flex",sm:"none"},flexDirection:"column",alignItems: "center",justifyContent: "center",}}>
+            </Box> 
+               <Box sx={{display:{xs:"flex",sm:"none"},flexDirection:"column",alignItems: "center",justifyContent: "center",textAlign:"center"}}>
 
               <Typography
             sx={{
               fontSize: { xs:24,md: 30, lg: 35, xl: 45, xxl: 50 },
               fontWeight: 700,
               color: "#007DFC",
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             HEALTHCARE COMMUNITIES
           </Typography>
@@ -120,7 +130,7 @@ export default function Healthcare() {
               fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
               fontWeight: 500,
               pt: "10px",
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             เข้าถึงผู้ป่วยของคุณได้มากกว่า ที่
             
@@ -131,7 +141,7 @@ export default function Healthcare() {
                 fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
                 fontWeight: 500,
                 
-              }}
+              }}className={noto_Sans_Thai.className}
             >
               Pensook Healthcare Communities
             </Typography>
@@ -141,25 +151,25 @@ export default function Healthcare() {
               fontSize: { xs:16,md: 18, lg: 25, xl: 30, xxl: 40 },
               fontWeight: 500,
               
-            }}
+            }}className={noto_Sans_Thai.className}
           >
             พื้นที่แบ่งปันความรู้และประสบการณ์ในการดูแลสุขภาพ
           </Typography>
 
-              </Box>
-          <Box
+              </Box> 
+            <Box
             sx={{
               display: "flex",
               justifyContent: "center",
-              width: "90vw",
+              width: "90%",
               height: { xs:362,md: 410, lg: 513 },
               mt: { xs:5,md: 5, lg: 10 },
               borderRadius: "50px",
               backgroundColor: "#F3F6FF",
-              
+              overflow: "hidden", 
             }}
-          >
-            <Grid container spacing={2}>
+          > 
+             <Grid container spacing={2}>
             <Grid
                 item
                 xs={12}
@@ -180,7 +190,7 @@ export default function Healthcare() {
                       fontWeight: 600,
                       color: "#915BD7",
                       transition: "top: 1s",
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     {count}
                   </Typography>
@@ -190,7 +200,7 @@ export default function Healthcare() {
                       fontSize: {xs:24},
                       fontWeight: 500,
                       mt: { lg: -1, xxl: -3 },
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     โพสต์
                   </Typography>
@@ -204,7 +214,7 @@ export default function Healthcare() {
                         fontWeight: 500,
                         display: "flex",
                         mt: 5,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       ให้การ
                       <Typography
@@ -212,7 +222,7 @@ export default function Healthcare() {
                           color: "#915BD7",
                           fontSize: {xs:16},
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ดูแลผู้ป่วย
                       </Typography>
@@ -221,7 +231,7 @@ export default function Healthcare() {
                           color: "#5D6471",
                           fontSize: {xs:16},
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ที่เหนือกว่า
                       </Typography>
@@ -237,7 +247,8 @@ export default function Healthcare() {
                       fontWeight: 500,
                       mt:5,
                       mb: 5,
-                    }}
+                      textAlign:"center"
+                    }}className={noto_Sans_Thai.className}
                   >
                     เข้าร่วม Pensook Healthcare Communities
                   </Typography>
@@ -285,13 +296,11 @@ export default function Healthcare() {
                         fontSize: 20,
                         fontWeight: 500,
                         pr: 1.5,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       เข้าร่วม
                     </Typography>
                   </Button>
-
-
               </Grid>
 
 
@@ -328,7 +337,9 @@ export default function Healthcare() {
                       fontWeight: 600,
                       color: "#915BD7",
                       transition: "top: 1s",
+                      
                     }}
+                    className={noto_Sans_Thai.className}
                   >
                     {count}
                   </Typography>
@@ -338,7 +349,7 @@ export default function Healthcare() {
                       fontSize: { md: 25, lg: 40 },
                       fontWeight: 500,
                       mt: { lg: -1, xxl: -3 },
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     โพสต์
                   </Typography>
@@ -350,7 +361,7 @@ export default function Healthcare() {
                         fontWeight: 500,
                         display: "flex",
                         mt: 5,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       ให้การ
                       <Typography
@@ -358,7 +369,7 @@ export default function Healthcare() {
                           color: "#915BD7",
                           fontSize: { md: 25, lg: 40 },
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ดูแลผู้ป่วย
                       </Typography>
@@ -367,7 +378,7 @@ export default function Healthcare() {
                           color: "#5D6471",
                           fontSize: { md: 25, lg: 40 },
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ที่เหนือกว่า
                       </Typography>
@@ -405,7 +416,7 @@ export default function Healthcare() {
                         fontWeight: 500,
                         display: "flex",
                         mt: 12,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       ให้การ
                       <Typography
@@ -413,7 +424,7 @@ export default function Healthcare() {
                           color: "#915BD7",
                           fontSize: { md: 25, lg: 40 },
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ดูแลผู้ป่วย
                       </Typography>
@@ -422,7 +433,7 @@ export default function Healthcare() {
                           color: "#5D6471",
                           fontSize: { md: 25, lg: 40 },
                           fontWeight: 500,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         ที่เหนือกว่า
                       </Typography>
@@ -437,7 +448,7 @@ export default function Healthcare() {
                     }}
                   >
                     <Typography
-                      sx={{ color: "#5D6471", fontSize: 40, fontWeight: 500 }}
+                      sx={{ color: "#5D6471", fontSize: 40, fontWeight: 500,textAlign:"center" }}className={noto_Sans_Thai.className}
                     >
                       เข้าร่วม Pensook Healthcare
                     </Typography>
@@ -447,7 +458,7 @@ export default function Healthcare() {
                         fontSize: 40,
                         fontWeight: 500,
                         mt: 0.5,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       Communities
                     </Typography>
@@ -491,7 +502,7 @@ export default function Healthcare() {
                           fontSize: 40,
                           fontWeight: 500,
                           pr: 1.5,
-                        }}
+                        }}className={noto_Sans_Thai.className}
                       >
                         เข้าร่วม
                       </Typography>
@@ -524,7 +535,7 @@ export default function Healthcare() {
                       fontWeight: 500,
                       mt: -8,
                       mb: 10,
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     เข้าร่วม Pensook Healthcare Communities
                   </Typography>
@@ -568,16 +579,16 @@ export default function Healthcare() {
                         fontSize: 24,
                         fontWeight: 500,
                         pr: 1.5,
-                      }}
+                      }}className={noto_Sans_Thai.className}
                     >
                       เข้าร่วม
                     </Typography>
                   </Button>
                 </Box>
               </Grid>
-            </Grid>
-          </Box>
-        </Box>
+            </Grid> 
+          </Box>  
+         </Box> 
       </ThemeProvider>
     </>
   );

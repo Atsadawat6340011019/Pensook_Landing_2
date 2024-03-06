@@ -9,6 +9,16 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { Noto_Sans_Thai } from "next/font/google";
+
+
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function ProductSoftware2() {
 
   const Responsive = createTheme({
@@ -83,11 +93,11 @@ export default function ProductSoftware2() {
         }}
       >
         <Box sx={{ display: "flex", mt: 8 }}>
-          <Typography sx={{ fontSize: {md:30,lg:40,xl:45,xxl:50}, fontWeight: 700, color: "#007DFC" }}>
+          <Typography sx={{ fontSize: {md:30,lg:40,xl:45,xxl:50}, fontWeight: 700, color: "#007DFC" }}className={noto_Sans_Thai.className}>
             PHARMACY VENDING MACHINE
           </Typography>
           <Typography
-            sx={{ fontSize: {md:30,lg:40,xl:45,xxl:50}, fontWeight: 700, color: "#9747FF", ml: 1 }}
+            sx={{ fontSize: {md:30,lg:40,xl:45,xxl:50}, fontWeight: 700, color: "#9747FF", ml: 1 }}className={noto_Sans_Thai.className}
           >
             SOFTWARE
           </Typography>
@@ -207,7 +217,7 @@ export default function ProductSoftware2() {
                       fontWeight: 600,
                       color: "#9747FF",
                       ml: 2,
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     Easy To Use
                   </Typography>
@@ -238,7 +248,7 @@ export default function ProductSoftware2() {
                                   fontSize: 18,
                                   fontWeight: 500,
                                   color: "#475467",
-                                }}
+                                }}className={noto_Sans_Thai.className}
                               >
                                 {item.text}
                               </Typography>
@@ -290,7 +300,7 @@ export default function ProductSoftware2() {
                       fontWeight: 600,
                       color: "#9747FF",
                       ml: 2,
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     Data Management
                   </Typography>
@@ -321,7 +331,7 @@ export default function ProductSoftware2() {
                                   fontSize: 18,
                                   fontWeight: 500,
                                   color: "#475467",
-                                }}
+                                }}className={noto_Sans_Thai.className}
                               >
                                 {item.text}
                               </Typography>
@@ -373,7 +383,7 @@ export default function ProductSoftware2() {
                       fontWeight: 600,
                       color: "#9747FF",
                       ml: 2,
-                    }}
+                    }}className={noto_Sans_Thai.className}
                   >
                     Security
                   </Typography>
@@ -404,7 +414,7 @@ export default function ProductSoftware2() {
                                   fontSize: 18,
                                   fontWeight: 500,
                                   color: "#475467",
-                                }}
+                                }}className={noto_Sans_Thai.className}
                               >
                                 {item.text}
                               </Typography>

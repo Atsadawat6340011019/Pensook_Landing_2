@@ -7,6 +7,14 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
+import { Noto_Sans_Thai } from "next/font/google";
+
+
+const noto_Sans_Thai = Noto_Sans_Thai({
+  weight: ['400', '500' , '600' , '700'],
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function CardProductList() {
   const Responsive = createTheme({
     breakpoints: {
@@ -19,16 +27,14 @@ export default function CardProductList() {
         xxl: 1800,
       },
     },
-    typography: {
-      fontFamily: "Noto Sans Thai, sans-serif",
-    },
+    
   });
   const router = useRouter();
 
   const [SlideProduct1, setSlideProduct1] = useState(false);
   const [SlideProduct2, setSlideProduct2] = useState(false);
   const [SlideProduct3, setSlideProduct3] = useState(false);
-
+ 
   useEffect(() => {
     const currentURL = window.location.href;
     if (currentURL.includes("/SectionProducts/1")) {
@@ -96,7 +102,7 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}
+              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}className={noto_Sans_Thai.className}
             >
               Smart Medical Cabinet
             </Typography>
@@ -105,7 +111,7 @@ export default function CardProductList() {
             
           </Box>
           <Typography
-              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}
+              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}className={noto_Sans_Thai.className}
             >
               สามารถออกแบบ หรือปรับเปลี่ยน spec ของ Pharmacy ending machine
               ได้ตามใจคุณ
@@ -123,7 +129,7 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}
+              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}className={noto_Sans_Thai.className}
             >
               ดูเพิ่มเติม
             </Typography>
@@ -141,7 +147,7 @@ export default function CardProductList() {
             display: SlideProduct2 ? "none" : "flex",
             flexDirection: "column",
             alignItems: "center",
-            mr:15,
+            mr:{md:0,lg:15},
             cursor:"pointer",
             mb:{md:5,lg:0}
           }}
@@ -158,14 +164,14 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}
+              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}className={noto_Sans_Thai.className}
             >
               Automated Dispensing System Technology
             </Typography>
             
           </Box>
           <Typography
-              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}
+              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}className={noto_Sans_Thai.className}
             >
               สามารถออกแบบ หรือปรับเปลี่ยน spec ของ Pharmacy ending machine
               ได้ตามใจคุณ
@@ -183,7 +189,7 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}
+              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}className={noto_Sans_Thai.className}
             >
               ดูเพิ่มเติม
             </Typography>
@@ -201,7 +207,7 @@ export default function CardProductList() {
             display: SlideProduct3 ? "none" : "flex",
             flexDirection: "column",
             alignItems: "center",
-            mr:15,
+           
             cursor:"pointer",
             mb:{md:5,lg:0}
           }}
@@ -218,14 +224,14 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}
+              sx={{ color: "#007DFC", fontSize: 25, fontWeight: 700 }}className={noto_Sans_Thai.className}
             >
               Pharmacy Vending Machine
             </Typography>
            
           </Box>
           <Typography
-              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}
+              sx={{ color: "#475467", fontSize: 18, fontWeight: 500 ,  marginTop: "auto",}}className={noto_Sans_Thai.className}
             >
               สามารถออกแบบ หรือปรับเปลี่ยน spec ของ Pharmacy ending machine
               ได้ตามใจคุณ
@@ -243,7 +249,7 @@ export default function CardProductList() {
             }}
           >
             <Typography
-              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}
+              sx={{ color: "#FFFFFF", fontSize: 25, fontWeight: 500 }}className={noto_Sans_Thai.className}
             >
               ดูเพิ่มเติม
             </Typography>
